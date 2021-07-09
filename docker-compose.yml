@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  express1:
+    build: ./APICONTAINER
+    volumes: 
+      - ./APICONTAINER:/usr/src/app
+    environment:
+      - APPID=1111
+    ports:
+      - 1111:1111
+
+  express2:
+    build: ./APICONTAINER
+    volumes: 
+      - ./APICONTAINER:/usr/src/app
+    environment:
+      - APPID=2222
+    ports:
+      - 2222:2222
+
+  express3:
+    build: ./APICONTAINER
+    volumes: 
+      - ./APICONTAINER:/usr/src/app
+    environment:
+      - APPID=3333
+    ports:
+      - 3333:3333
+
+  nginx-loadbalancer:
+    build: ./NGINXCONTAINER
+    ports:
+      - 8080:8080

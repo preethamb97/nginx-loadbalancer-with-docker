@@ -1,0 +1,11 @@
+FROM node:12.13.0-alpine
+
+WORKDIR /EXPRESSAPP
+
+COPY ./API/package.json /EXPRESSAPP
+
+RUN npm install
+
+COPY ./API/. /EXPRESSAPP
+
+CMD ["npm", "start"]
