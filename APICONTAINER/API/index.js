@@ -4,7 +4,7 @@ const appId = process.env.APPID;
 const PORTNUMBER = appId;
 app.get('/', (req, res) => {
   res.send({
-    message: `Welcome to ${appId} home page`
+    message: `Welcome to ${appId} home page running on port ${appId}`
   });
 });
 
