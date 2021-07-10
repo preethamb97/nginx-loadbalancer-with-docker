@@ -20,6 +20,15 @@ services:
     ports:
       - "2222:2222"
     network_mode: host
+  myapp3:
+    restart: always
+    container_name: myapp3
+    build: ./APICONTAINER
+    environment:
+      - APPID=3333
+    ports:
+      - "3333:3333"
+    network_mode: host
 
   myproxy:
     container_name: myproxy
