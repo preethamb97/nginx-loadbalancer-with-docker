@@ -27,3 +27,5 @@ sudo docker rmi -f $(sudo docker images -a -q)
 sudo docker rm -f $(sudo docker ps -a -q)
 
 ## this basic nginx loadbalancer uses round robin for load balancing
+
+### url http://localhost:8080
